@@ -19,7 +19,7 @@ namespace liquibook { namespace book {
 ///   Market prices always sort first since they will match any counter price.
 ///   Sell side low prices sort before high prices because they match more buys.
 ///   Buy side high prices sort before low prices because they match more asks.
-///   
+///
 class ComparablePrice
 {
   Price price_;
@@ -66,7 +66,7 @@ public:
     }
     else if(buySide_)
     {
-      // Buying: Highest prices first. 
+      // Buying: Highest prices first.
       return rhs < price_ ;
     }
     else
@@ -86,7 +86,7 @@ public:
   /// @brief inequality compare key to a price
   bool operator !=(Price rhs) const
   {
-    return ! price_ == rhs;
+    return ! (price_ == rhs);
   }
 
   /// @brief greater than compare key to a price
